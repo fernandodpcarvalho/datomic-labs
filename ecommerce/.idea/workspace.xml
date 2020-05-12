@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc16df9c-c4ce-47d5-9743-34a429ac9233" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Clojure Namespace" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bEndmly8daNr8V7e8B5WS8HES2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToKeyword.includeLibraries" value="false" />
+    <property name="GoToNamespace.includeLibraries" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="cursive.last.file.extension./home/fernandocarvalho/Documentos/IdeaProjects/Cursos/datomic-01-introducao/projeto/ecommerce/src" value="clj" />
+    <property name="cursive.last.file.extension./home/fernandocarvalho/Documentos/IdeaProjects/Cursos/datomic/ecommerce/src" value="clj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ecommerce-01" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1589241943853">{:repl-history {:ide [], :local [{:command &quot;(d/delete-database db-uri)&quot;, :offset 26, :ns &quot;ecommerce.core&quot;} {:command &quot;(def db-uri \&quot;datomic:dev://localhost:4334/ecommerce\&quot;)&quot;, :offset 53, :ns &quot;ecommerce.db&quot;} {:command &quot;(defn abre-conexao []\n  (d/create-database db-uri)\n  (d/connect db-uri))&quot;, :offset 72, :ns &quot;ecommerce.db&quot;} {:command &quot;(defn apaga-banco []\n  (d/delete-database db-uri))&quot;, :offset 50, :ns &quot;ecommerce.db&quot;} {:command &quot;(def schema [:db/ident :produto/palavra-chave\n             :db/valueType :db.type/string\n             :db/cardinality :db.cardinality/many])&quot;, :offset 140, :ns &quot;ecommerce.db&quot;} {:command &quot;(defn cria-schema [conn]\n  (d/transact conn schema))&quot;, :offset 52, :ns &quot;ecommerce.db&quot;} {:command &quot;(defn todos-os-produtos [db]\n  (d/q '[:find ?entidade\n         :where [?entidade :produto/nome]] db))&quot;, :offset 101, :ns &quot;ecommerce.db&quot;} {:command &quot;(def schema [{:db/ident       :produto/nome\n              :db/valueType   :db.type/string\n              :db/cardinality :db.cardinality/one\n              :db/doc         \&quot;O nome de um produto\&quot;}\n             {:db/ident       :produto/slug\n              :db/valueType   :db.type/string\n              :db/cardinality :db.cardinality/one\n              :db/doc         \&quot;O caminho para acessar esse produto via http\&quot;}\n             {:db/ident       :produto/preco\n              :db/valueType   :db.type/bigdec\n              :db/cardinality :db.cardinality/one\n              :db/doc         \&quot;O preco de um produto com precisão monetária\&quot;}])&quot;, :offset 632, :ns &quot;ecommerce.db&quot;} {:command &quot;(d/q '[:find ?entidade\n       :where [?entidade :produto/nome]] db)&quot;, :offset 67, :ns &quot;ecommerce.aula1-2&quot;} {:command &quot;(defn todos-os-produtos-por-slug [db slug-que-estou-procurando]\n  (d/q '[:find ?entidade\n         :where [?entidade :produto/slug \&quot;computador-novo\&quot;]] db))&quot;, :offset 154, :ns &quot;ecommerce.aula1-2&quot;} {:command &quot;(pprint (db/todos-os-produtos (d/db conn)))&quot;, :offset 43, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(pprint (db/todos-os-produtos-por-preco (d/db conn)))&quot;, :offset 53, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(d/transact conn [[:db/retract 17592186045418 :produto/palavra-chave \&quot;desktop\&quot;]])&quot;, :offset 81, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(pprint (db/todos-os-produtos-por-palavra-chave (d/db conn) \&quot;computador\&quot;))&quot;, :offset 74, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(pprint (db/todos-os-produtos-pull (d/db conn)))&quot;, :offset 48, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(d/transact conn [[:db/add 17592186045418 :produto/palavra-chave \&quot;desktop\&quot;]\n                  [:db/add 17592186045418 :produto/palavra-chave \&quot;computador\&quot;]\n                  ])&quot;, :offset 175, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(pprint (db/todos-os-produtos-02 (d/db conn)))&quot;, :offset 46, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(let [computador (model/novo-produto \&quot;Computador Novo\&quot;, \&quot;/computador_novo\&quot;, 2500.10M)\n      celular (model/novo-produto \&quot;Celular Novo\&quot;, \&quot;/celular\&quot;, 1999.99M)\n      calculadora {:produto/nome \&quot;Calculadora 4 operações\&quot;}\n      celular-barato (model/novo-produto \&quot;Celular barato\&quot;, \&quot;/celular_barato\&quot;, 499.99M)\n      ]\n  (pprint @(d/transact conn [computador celular calculadora celular-barato])))\n&quot;, :offset 392, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(let [computador (model/novo-produto \&quot;Computador Novo\&quot;, \&quot;/computador_novo\&quot;, 2500.10M)\n      celular (model/novo-produto \&quot;Celular Novo\&quot;, \&quot;/celular\&quot;, 1999.99M)\n      calculadora {:produto/nome \&quot;Calculadora 4 operações\&quot;}\n      celular-barato (model/novo-produto \&quot;Celular barato\&quot;, \&quot;/celular_barato\&quot;, 499.99M)\n      ]\n  (pprint @(d/transact conn [computador celular calculadora celular-barato])))&quot;, :offset 391, :ns &quot;ecommerce.aula6&quot;} {:command &quot;(def computador (model/novo-produto (model/uuid) \&quot;Computador Novo\&quot;, \&quot;/computador_novo\&quot;, 2500.10M))\n(def celular (model/novo-produto (model/uuid) \&quot;Celular Novo\&quot;, \&quot;/celular\&quot;, 1999.99M))\n(def celular-barato (model/novo-produto (model/uuid) \&quot;Celular barato\&quot;, \&quot;/celular_barato\&quot;, 499.99M))\n(def calculadora {:produto/nome \&quot;Calculadora 4 operações\&quot;})&quot;, :offset 343, :ns &quot;ecommerce.aula2&quot;} {:command &quot;(pprint @(d/transact conn [computador celular calculadora celular-barato]))&quot;, :offset 75, :ns &quot;ecommerce.aula2&quot;} {:command &quot;(def celular-barato2 (model/novo-produto (:produto/id celular-barato) \&quot;Celular barato 2\&quot;, \&quot;/celular_barato_2\&quot;, 279.99M))&quot;, :offset 120, :ns &quot;ecommerce.aula2&quot;} {:command &quot;(pprint celular-barato2)&quot;, :offset 24, :ns &quot;ecommerce.aula2&quot;} {:command &quot;(pprint @(d/transact conn [celular-barato-2]))&quot;, :offset 46, :ns &quot;ecommerce.aula2&quot;} {:command &quot;(pprint @(d/transact conn [celular-barato2]))&quot;, :offset 45, :ns &quot;ecommerce.aula2&quot;} {:command &quot;c&quot;, :offset 1, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def xadrez (model/novo-produto \&quot;Tabuleiro\&quot;, \&quot;/tabuleiro\&quot;, 39.99M))&quot;, :offset 67, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def produtos (db/todos-os-produtos-pull (d/db conn)))&quot;, :offset 54, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(pprint produtos)&quot;, :offset 17, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(db/apaga-banco)\n(def conn (db/abre-conexao))\n(db/cria-schema conn)&quot;, :offset 67, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def eletronicos (model/nova-categoria \&quot;Eletrônicos\&quot;))&quot;, :offset 54, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def esporte (model/nova-categoria \&quot;Esporte\&quot;))&quot;, :offset 46, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(pprint @(d/transact conn [eletronicos, esporte]))&quot;, :offset 50, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def categorias (db/todas-as-categorias (d/db conn)))&quot;, :offset 53, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(pprint categorias)&quot;, :offset 19, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def computador (model/novo-produto (model/uuid) \&quot;Computador Novo\&quot;, \&quot;/computador_novo\&quot;, 2500.10M))\n(def celular (model/novo-produto (model/uuid) \&quot;Celular Novo\&quot;, \&quot;/celular\&quot;, 1999.99M))\n(def celular-barato (model/novo-produto (model/uuid) \&quot;Celular barato\&quot;, \&quot;/celular_barato\&quot;, 499.99M))\n(def xadrez (model/novo-produto \&quot;Tabuleiro\&quot;, \&quot;/tabuleiro\&quot;, 39.99M))\n(def calculadora {:produto/nome \&quot;Calculadora 4 operações\&quot;})&quot;, :offset 411, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(pprint @(d/transact conn [computador celular calculadora xadrez celular-barato]))&quot;, :offset 82, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def produtos (db/todos-os-produtos-pull (d/db conn)))\n(pprint produtos)&quot;, :offset 72, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(db/apaga-banco)&quot;, :offset 16, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(def conn (db/abre-conexao))&quot;, :offset 28, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(db/cria-schema conn)&quot;, :offset 21, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(db/apaga-banco)\n(def conn (db/abre-conexao))\n(db/cria-schema conn)\n\n;;Categorias\n(def eletronicos (model/nova-categoria \&quot;Eletrônicos\&quot;))\n(def esporte (model/nova-categoria \&quot;Esporte\&quot;))\n\n(pprint @(d/transact conn [eletronicos, esporte]))\n\n(def categorias (db/todas-as-categorias (d/db conn)))\n(pprint categorias)\n\n;;Produtos\n(def computador (model/novo-produto (model/uuid) \&quot;Computador Novo\&quot;, \&quot;/computador_novo\&quot;, 2500.10M))\n(def celular (model/novo-produto (model/uuid) \&quot;Celular Novo\&quot;, \&quot;/celular\&quot;, 1999.99M))\n(def celular-barato (model/novo-produto (model/uuid) \&quot;Celular barato\&quot;, \&quot;/celular_barato\&quot;, 499.99M))\n(def xadrez (model/novo-produto \&quot;Tabuleiro\&quot;, \&quot;/tabuleiro\&quot;, 39.99M))\n(def calculadora {:produto/nome \&quot;Calculadora 4 operações\&quot;})\n\n(pprint @(d/transact conn [computador celular calculadora xadrez celular-barato]))\n\n(def produtos (db/todos-os-produtos-pull (d/db conn)))\n(pprint produtos)&quot;, :offset 892, :ns &quot;ecommerce.aula3&quot;} {:command &quot;(pprint (d/transact conn [[:db/add\n                           [:produto/id (:produto/id computador)]\n                           :produto/categoria\n                           [categoria/id (:categoria/id eletronicos)]]]))&quot;, :offset 220, :ns &quot;ecommerce.aula3&quot;}], :remote []}}</component>
+  <component name="RunManager" selected="Clojure REPL.REPL for ecommerce">
+    <configuration name="REPL for ecommerce" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="ecommerce" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="core" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="ecommerce" />
+      <setting name="path" value="$PROJECT_DIR$/src/ecommerce/core.clj" />
+      <setting name="namespace" value="" />
+      <setting name="execution" value="INTELLIJ" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/ecommerce" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Clojure REPL.REPL for ecommerce" />
+        <item itemvalue="Clojure Application.core" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc16df9c-c4ce-47d5-9743-34a429ac9233" name="Default Changelist" comment="" />
+      <created>1588206209289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588206209289</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="701" y="164" width="379" height="498" key="FileChooserDialogImpl" timestamp="1589168272151">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="1832" y="142" width="556" height="491" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1366.768@1366.0.1366.768" timestamp="1588592755310" />
+    <state x="701" y="164" width="379" height="498" key="FileChooserDialogImpl/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1589168272151" />
+    <state x="1366" y="164" key="FileChooserDialogImpl/72.27.2660.741@72.27.2660.741" timestamp="1588939286038" />
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1588357980935">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588357980935" />
+    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1588357980935">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588357980935" />
+    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1588357980935">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588357980935" />
+    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1588357980935">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588357980935" />
+    <state x="124" y="27" width="1022" height="737" key="SettingsEditor" timestamp="1588254848927">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="124" y="27" width="1022" height="737" key="SettingsEditor/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588254848927" />
+    <state x="393" y="231" key="com.intellij.ide.util.TipDialog" timestamp="1589214668805">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="1705" y="211" key="com.intellij.ide.util.TipDialog/72.27.1294.741/1366.0.1366.768@1366.0.1366.768" timestamp="1588592717288" />
+    <state x="393" y="231" key="com.intellij.ide.util.TipDialog/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1589214668805" />
+    <state x="498" y="90" width="432" height="629" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1588277226456">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="498" y="90" width="432" height="629" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1588277226456" />
+    <state x="1366" y="110" width="1356" height="554" key="new project wizard" timestamp="1588592738593">
+      <screen x="1366" y="0" width="1366" height="768" />
+    </state>
+    <state x="1366" y="110" width="1356" height="554" key="new project wizard/72.27.1294.741/1366.0.1366.768@1366.0.1366.768" timestamp="1588592738593" />
+    <state x="310" y="89" width="816" height="678" key="search.everywhere.popup" timestamp="1589157031575">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="310" y="89" width="816" height="678" key="search.everywhere.popup/72.27.1294.741/1366.0.1366.768@72.27.1294.741" timestamp="1589157031575" />
+  </component>
+</project>
